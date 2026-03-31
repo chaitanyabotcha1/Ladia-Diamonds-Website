@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Ladia Diamonds</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+    <img src="images/logo.png">
+    <span>Ladia Diamonds</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="icons">
+    <input type="text" placeholder="Search products...">
+    <a href="wishlist.html">&#10084;</a>
+    <a href="cart.html">🛒</a>
+  </div>
+
+</header>
+
+<section class="hero">
+  <h1>Timeless Elegance in Every Diamond</h1>
+  <p>Luxury Jewellery Collection</p>
+  <a href="shop.html" class="btn">Shop Now</a>
+</section>
+
+<section class="language-section">
+    <h2>Choose Your Language to listen 🎧</h2>
+    <p>Select your preferred language</p>
+
+    <div class="language-buttons">
+        <button class="lang-btn red" onclick="setLanguage('en')">1 - English</button>
+        <button class="lang-btn blue" onclick="setLanguage('te')">2 - తెలుగు</button>
+        <button class="lang-btn black" onclick="setLanguage('hi')">3 - हिन्दी</button>
+    </div>
+
+    <button class="stop-voice-btn" onclick="stopVoice()">🔇 Stop Voice</button>
+
+    <small style="font-size:12px; color:gray; display:block; margin-top:5px;">
+        This only changes the audio language for product details.
+    </small>
+    
+    <p id="selected-language-msg"></p>
+</section>
+
+<section class="products">
+  <h2>Shop by Category</h2>
+
+  <div class="product-grid">
+
+    <div class="card">
+      <a href="category.html?cat=earring">
+        <img src="images/earring1.jpg">
+        <h3>Earrings</h3>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="category.html?cat=ring">
+        <img src="images/ring1.jpg">
+        <h3>Rings</h3>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="category.html?cat=necklace">
+        <img src="images/necklace1.jpg">
+        <h3>Necklaces</h3>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="category.html?cat=bangle">
+        <img src="images/bangle1.jpg">
+        <h3>Bangles</h3>
+      </a>
+    </div>
+
+    <div class="card">
+      <a href="category.html?cat=bracelet">
+        <img src="images/bracelet1.jpg">
+        <h3>Bracelets</h3>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="products">
+  <h2>Featured Collection</h2>
+
+  <div class="product-grid">
+
+    <div class="card">
+      <a href="product.html?name=Diamond%20Ring&cat=ring">
+        <img src="images/ring1.jpg">
+        <h3>Diamond Ring</h3>
+        <p class="price">&#8377;85,000</p>
+      </a>
+
+      <button class="cart-btn" onclick='addCart({name:"Diamond Ring",price:85000,img:"images/ring1.jpg"})'>Add to Cart</button>
+      <button class="wish-btn" onclick='addWish({name:"Diamond Ring",price:85000,img:"images/ring1.jpg"})'>&#10084;</button>
+    </div>
+
+    <div class="card">
+      <a href="product.html?name=Diamond%20Studs&cat=earring">
+        <img src="images/earring1.jpg">
+        <h3>Diamond Studs</h3>
+        <p class="price">&#8377;35,000</p>
+      </a>
+
+      <button class="cart-btn" onclick='addCart({name:"Diamond Studs",price:35000,img:"images/earring1.jpg"})'>Add to Cart</button>
+      <button class="wish-btn" onclick='addWish({name:"Diamond Studs",price:35000,img:"images/earring1.jpg"})'>&#10084;</button>
+    </div>
+
+    <div class="card">
+      <a href="product.html?name=Gold%20Necklace&cat=necklace">
+        <img src="images/necklace1.jpg">
+        <h3>Gold Necklace</h3>
+        <p class="price">&#8377;1,20,000</p>
+      </a>
+
+      <button class="cart-btn" onclick='addCart({name:"Gold Necklace",price:120000,img:"images/necklace1.jpg"})'>Add to Cart</button>
+      <button class="wish-btn" onclick='addWish({name:"Gold Necklace",price:120000,img:"images/necklace1.jpg"})'>&#10084;</button>
+    </div>
+
+    <div class="card">
+      <a href="product.html?name=Diamond%20Bracelet&cat=bracelet">
+        <img src="images/bracelet2.jpg">
+        <h3>Diamond Bracelet</h3>
+        <p class="price">&#8377;95,000</p>
+      </a>
+
+      <button class="cart-btn" onclick='addCart({name:"Diamond Bracelet",price:95000,img:"images/bracelet2.jpg"})'>Add to Cart</button>
+      <button class="wish-btn" onclick='addWish({name:"Diamond Bracelet",price:95000,img:"images/bracelet2.jpg"})'>&#10084;</button>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <p>2026 Ladia Diamonds</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Product</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+
+  <div class="logo">
+    <img src="images/logo.png">
+    <span>Ladia Diamonds</span>
+  </div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="shop.html">Shop</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <div class="icons">
+    <a href="wishlist.html">&#10084;</a>
+    <a href="cart.html">🛒</a>
+  </div>
+
+</header>
+
+<section class="product-detail">
+
+  <div class="product-images">
+    <img id="mainImg">
+  </div>
+
+  <div class="product-info">
+    <h1 id="name"></h1>
+    <h2 id="price"></h2>
+
+  <div class="product-rating">
+    <span id="stars">★★★★★</span>
+    <span id="ratingText"></span>
+  </div>
+
+    <p id="metal" class="product-meta"></p>
+    <p id="weight" class="product-meta"></p>
+    <p id="discount" class="product-discount"></p>
+
+    <p id="desc" class="desc"></p>
+
+    <div class="voice-buttons">
+      <button class="listen-btn" onclick="speakProductDetails(window.currentProduct)">🔊 Listen Details</button>
+      <button class="stop-btn" onclick="stopVoice()">🔇 Stop Voice</button>
+    </div>
+
+    <button class="btn" onclick="addCart(window.currentProduct)">Add to Cart</button>
+    <button class="wish-btn" onclick="addWish(window.currentProduct)">❤</button>
+  </div>
+
+</section>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
