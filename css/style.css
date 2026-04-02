@@ -143,13 +143,15 @@ nav a:hover {
   border: 1px solid #C9A74E;
 }
 
-.card:hover h3,
+.card:hover h3{
+color: white;
+}
 .card:hover p {
-  color: black;
+    color: #FFD700;
 }
 
 .card:hover a {
-  color: black;
+  color: white;
 }
 
 .cart-btn,
