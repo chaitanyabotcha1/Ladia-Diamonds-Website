@@ -440,6 +440,29 @@ function removeWish(index) {
   location.reload();
 }
 
+function moveToCart(index) {
+  let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  let product = wishlist[index];
+
+  if (!product) {
+    alert("Product not found");
+    return;
+  }
+
+  cart.push(product);
+  localStorage.setItem("cart", JSON.stringify(cart));
+
+  if (selectedLanguage === "te") {
+    alert(product.name + " added to Cart 🛒");
+  } else if (selectedLanguage === "hi") {
+    alert(product.name + " added to Cart 🛒");
+  } else {
+    alert(product.name + " added to Cart 🛒");
+  }
+}
+
 // =========================
 // CART PAGE DISPLAY
 // =========================
@@ -497,6 +520,7 @@ if (document.getElementById("wishlistItems")) {
           <img src="${p.img}">
           <h3>${p.name}</h3>
           <p class="price">&#8377;${p.price}</p>
+          <button class="cart-btn" onclick="moveToCart(${index})">Move to Cart</button>
           <button class="remove-btn" onclick="removeWish(${index})">Remove</button>
         </div>
       `;
